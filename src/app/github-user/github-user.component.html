@@ -1,5 +1,15 @@
-<p>name: {{user.name}}</p>
-<p>login: {{user.login}}</p>
-<p>html_url: {{user.html_url}}</p>
-<p>following: {{user.following}}</p>
-<p>public_repos:{{user.public_repos}}</p>
+<div *ngIf="user,repo">
+  <p>name: {{ user.name }}</p>
+  <p>login: {{ user.login }}</p>
+  <p>html_url: {{ user.html_url }}</p>
+  <p>following: {{ user.following }}</p>
+  <p>public_repos:{{ user.public_repos }}</p>
+  <hr />
+<ul>
+    <li *ngFor="let x in repo">
+        {{ repo.html_url }}
+    </li>
+</ul>
+
+  
+</div>
