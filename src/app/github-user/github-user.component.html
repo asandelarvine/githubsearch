@@ -6,8 +6,10 @@
   <p>public_repos:{{ user.public_repos }}</p>
   <hr />
 <ul>
-    <li *ngFor="let x of repo">
-        {{ x.html_url}}
+    <li *ngFor="let oneRepo of repo">
+        <p>{{ oneRepo.html_url}}</p>
+        <p>{{oneRepo.description}}</p>
+        <br>
     </li>
 </ul>
 
