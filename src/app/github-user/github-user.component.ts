@@ -11,8 +11,8 @@ import { Repository } from '../repository';
   styleUrls: ['./github-user.component.css']
 })
 export class GithubUserComponent implements OnInit {
-  user!: User;
-  repo:Repository;
+  user?: User;
+  repo!:Repository | any;
 
   constructor(private service: GitserviceService) {
     this.repo = new Repository('','','',);
@@ -21,15 +21,14 @@ export class GithubUserComponent implements OnInit {
   search(typedWord: any) {
     this.service.find(typedWord).then((success) => {
       this.user = this.service.user
-      console.log(this.user);
     })
     this.service.repoHandler(typedWord).then((success) => {
       this.repo = this.service.repo;
-      console.log(this.repo);
     },
-    (error) => {
-      console.log(error)
-    });
+      (error) => {
+        console.log(error)
+      }
+    )
   }
 
   ngOnInit(): void {

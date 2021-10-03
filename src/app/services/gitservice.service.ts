@@ -10,8 +10,8 @@ import { Repository } from '../repository';
   providedIn: 'root'
 })
 export class GitserviceService {
-  user: User;
-  repo:Repository;
+  user!: User;
+  repo!:Repository;
 
   constructor(private http: HttpClient) {
     this.user = new User('', '', '', 0, 0, 0,);
@@ -44,25 +44,25 @@ export class GitserviceService {
     });
     return promise;
   }
-  repoHandler(user: any) {
-    interface repoApi {
-      html_url: string,
-      language: string,
-      description: string,
+    repoHandler(user:any){
+    interface repoApi{
+      html_url:string,
+      description:string,
+      language:string,
     }
-    let headerExtras = new HttpHeaders({ 'Authorization': 'token' + environment.pass })
-    let addToRequest = { headers: headerExtras }
-    let url = environment.baseUrl + user + '/repos';
+    let headers = new HttpHeaders({'Authorization':'token' + environment.pass})
+    let parameters={headers:headers}
+    let url = environment.baseUrl  + user + '/repos';
     let promise = new Promise((resolve, reject) => {
-      this.http.get<repoApi>(url, addToRequest).toPromise().then(response => {
+      this.http.get<repoApi>(url,parameters).toPromise().then(response => {
         this.repo = response;
         resolve(resolve)
-
+  
       }, error => {
         reject();
         console.log(error)
       });
-
+  
     });
     return promise
   }
