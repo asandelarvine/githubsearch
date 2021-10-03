@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+
 
 import { GitserviceService } from '../services/gitservice.service';
 import { User } from '../user';
@@ -22,7 +22,7 @@ export class GithubUserComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.findThisUser('ronah289')
+    this.findThisUser('asandelarvine')
   }
 
 }
