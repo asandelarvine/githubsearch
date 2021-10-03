@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  pass :"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",
+  pass :"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",
   baseUrl :"https://api.github.com/users/"
 };
 
