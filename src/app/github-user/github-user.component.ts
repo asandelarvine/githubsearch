@@ -12,17 +12,17 @@ import { User } from '../user';
 export class GithubUserComponent implements OnInit {
   user!: User;
 
-  constructor(private gitService: GitserviceService) {
+  constructor(private service: GitserviceService) {
 
   }
-  findThisUser(nameOfUser: any) {
-    this.gitService.findUser(nameOfUser).then((success) => {
-      this.user = this.gitService.user
+  search(typedWord: any) {
+    this.service.find(typedWord).then((success) => {
+      this.user = this.service.user
     })
   }
 
   ngOnInit(): void {
-    this.findThisUser('asandelarvine')
+    this.search('asandelarvine')
   }
 
 }
