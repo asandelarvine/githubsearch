@@ -3,7 +3,9 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  pass :"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",
+  baseUrl :"https://api.github.com/users/"
 };
 
 /*
