@@ -1,14 +1,20 @@
+<app-form (word)="search($event);"></app-form>
 <div *ngIf="user,repo">
   <p>name: {{ user.name }}</p>
   <p>login: {{ user.login }}</p>
   <p>html_url: {{ user.html_url }}</p>
+  <p>biography:{{ user.biography}}</p>
+  <p>followers: {{ user.followers}}</p>
   <p>following: {{ user.following }}</p>
   <p>public_repos:{{ user.public_repos }}</p>
+  
+  
   <hr />
 <ul>
     <li *ngFor="let oneRepo of repo">
         <p>{{ oneRepo.html_url}}</p>
         <p>{{oneRepo.description}}</p>
+        <p>hooks_url:{{ oneRepo.hooks_url}}</p>
         <br>
     </li>
 </ul>
