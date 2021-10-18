@@ -1,4 +1,5 @@
 <app-form (word)="search($event);"></app-form>
+<div class="container">
 <div *ngIf="user,repo">
   <p>name: {{ user.name }}</p>
   <p>login: {{ user.login }}</p>
@@ -8,8 +9,8 @@
   <p>following: {{ user.following }}</p>
   <p>public_repos:{{ user.public_repos }}</p>
   
+  <br>
   
-  <hr />
 <ul>
     <li *ngFor="let oneRepo of repo">
         <p>{{ oneRepo.html_url}}</p>
@@ -20,4 +21,5 @@
 </ul>
 
   
+</div>
 </div>
