@@ -14,17 +14,19 @@ export class GitserviceService {
   repo!:Repository;
 
   constructor(private http: HttpClient) {
-    this.user = new User('', '', '', 0, 0, 0,);
-    this.repo = new Repository('','','',);
+    this.user = new User('', '', '', '', 0, 0, 0, );
+    this.repo = new Repository('','','','',);
   }
   find(typedWord: any) {
     interface userApi {
       login: string,
       html_url: string,
       name: string,
+      biography: string,
       public_repos: number,
       followers: number,
       following: number,
+      
     }
     let headerExtras = new HttpHeaders({ 'Authorization': 'token ' + environment.pass })
     let url = environment.baseUrl + typedWord;
@@ -49,6 +51,7 @@ export class GitserviceService {
       html_url:string,
       description:string,
       language:string,
+      hooks_url:string,
     }
     let headers = new HttpHeaders({'Authorization':'token' + environment.pass})
     let parameters={headers:headers}
