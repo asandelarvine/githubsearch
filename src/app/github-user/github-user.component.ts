@@ -15,7 +15,7 @@ export class GithubUserComponent implements OnInit {
   repo!:Repository | any;
 
   constructor(private service: GitserviceService) {
-    this.repo = new Repository('','','','');
+    this.repo = new Repository('','','','',);
 
   }
   search(typedWord: any) {

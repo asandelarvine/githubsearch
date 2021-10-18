@@ -1,0 +1,22 @@
+<!--<p>form works!</p>-->
+
+<section class="hero is-primary is-bold">
+    <div class="hero-body">
+        <div class="container">
+            <h1 class="Title">Github Search!!!</h1>
+
+            <form #form="ngForm" >
+
+                <!-- name -->
+                
+                  <input type="text" name="typedWord" class="input" placeholder="Your Name" [(ngModel)] ="typedWord" />
+                
+              
+                
+                
+                <button type="submit" class="button is-danger is-large" (click)="outputValue();" >Submit</button>
+              
+              </form>   
+        </div>
+    </div>
+</section>
