@@ -2,12 +2,18 @@
     text-align: center;
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-style: italic;
-    font-weight: 400;
-    font-size: larger;
-    color:rgb(47, 248, 255);
+    font-weight: 600;
+    font-size: x-large;
+    color:rgb(0, 217, 255);
+    background-color: black;
+}
+.title1{
+  font-size: xx-large;
+
 }
 p{
-    color: black;
+    color: #96034a;
+    font-weight: bold;
 }
 .container{
     background-image: url(https://icons-for-free.com/iconfiles/png/512/developers+github+github+logo+web+design+web+development+icon-1320196083747626912.png);
@@ -37,7 +43,7 @@ input[type=text], select {
   } 
   
   button:hover {
-    background-color: #45a049;
+    background-color: cyan;
   }
-  /*button*/
+  
   

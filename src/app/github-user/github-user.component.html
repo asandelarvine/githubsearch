@@ -1,25 +1,39 @@
-<app-form (word)="search($event);"></app-form>
-<div class="container">
-<div *ngIf="user,repo">
-  <p>name: {{ user.name }}</p>
-  <p>login: {{ user.login }}</p>
-  <p>html_url: {{ user.html_url }}</p>
-  <p>biography:{{ user.biography}}</p>
-  <p>followers: {{ user.followers}}</p>
-  <p>following: {{ user.following }}</p>
-  <p>public_repos:{{ user.public_repos }}</p>
-  
-  <br>
-  
-<ul>
-    <li *ngFor="let oneRepo of repo">
-        <p>{{ oneRepo.html_url}}</p>
-        <p>{{oneRepo.description}}</p>
-        <p>hooks_url:{{ oneRepo.hooks_url}}</p>
-        <br>
-    </li>
-</ul>
+<app-form (word)="search($event)"></app-form>
+<br />
+<br />
+<div class="details">
+  <div class="img">
+    <div *ngIf="user; repo" class="row">
+      <div class="detail1">
+        <img src="{{ user.avatar_url }}" alt="" height="250px" width="250px" />
+      </div>
+      <div class="detail2">
+        <p>name: {{ user.name }}</p>
+        <p>login: {{ user.login }}</p>
+        <p>html_url: {{ user.html_url }}</p>
+        <p>biography:{{ user.biography }}</p>
+        <p>followers: {{ user.followers }}</p>
+        <p>following: {{ user.following }}</p>
+        <p>public_repos:{{ user.public_repos }}</p>
+      </div>
+    </div>
+  </div>
 
-  
-</div>
+  <br />
+  <br />
+  <div class="description">
+    <p class="p1">Descriptions</p>
+    <ul>
+      <li *ngFor="let oneRepo of repo">
+        <p>{{ oneRepo.html_url }}</p>
+        <p style="color: cyan;">{{ oneRepo.description }}</p>
+        <p>hooks_url:{{ oneRepo.hooks_url }}</p>
+        <button class="btn">
+          <a href="{{ oneRepo.html_url }}" class="btn btn-success" target="_blank" >Visit Repository</a>
+        </button>
+        <br />
+        <br />
+      </li>
+    </ul>
+  </div>
 </div>

@@ -14,7 +14,7 @@ export class GitserviceService {
   repo!:Repository;
 
   constructor(private http: HttpClient) {
-    this.user = new User('', '', '', '', 0, 0, 0, );
+    this.user = new User('', '', '', '', 0, 0, 0, '');
     this.repo = new Repository('','','','',);
   }
   find(typedWord: any) {
@@ -26,6 +26,7 @@ export class GitserviceService {
       public_repos: number,
       followers: number,
       following: number,
+      avatar_url: string,
       
     }
     let headerExtras = new HttpHeaders({ 'Authorization': 'token ' + environment.pass })

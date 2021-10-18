@@ -2,14 +2,10 @@
 body{
     
     margin: 0;
-    background-color: rgb(54, 52, 52);
+    /* background-color: rgb(54, 52, 52); */
      height: 100vh;
      width: 100;
     
-        background-image: url(https://thumbs.dreamstime.com/b/wooden-background-old-blue-shabby-wood-planks-tattered-dilapidated-fence-natural-creative-texture-editing-design-ragged-220692401.jpg);
-        background-repeat: no-repeat;
-        background-size: 100%;
-        max-width: 100%;
-        height: auto;
-
+       
 }
+
